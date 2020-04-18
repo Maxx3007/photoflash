@@ -26,6 +26,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem "carrierwave"
+gem "mini_magick", '~> 3.5.0'
+gem "fog"
+gem "figaro", '~> 1.0.0'
+gem "unf"
+
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
