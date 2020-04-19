@@ -28,12 +28,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem "carrierwave"
 gem "mini_magick", '~> 3.5.0'
-gem "fog"
+#gem "fog"
 gem "figaro", '~> 1.0.0'
 gem "unf"
+gem "cloudinary"
 
-
-
+#for testing
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -45,6 +45,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "rspec-rails", '~> 3.0'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 

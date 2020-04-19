@@ -1,32 +1,17 @@
 class PhotoUploader < CarrierWave::Uploader::Base
 
-include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave
 
+  process :convert => 'png'
+  process :tags => ['post_picture']
 
-include Sprockets::Rails::Helper
+  version :standard do
+    process :resize_to_fill => [300, 300, :north]
+  end
 
-storage :fog
-
-
-def store_dir
-  "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-
-end
-
-
-version :tiny do
-  process :resize_to_fill => [20, 20]
-end
-
-
-version :profile_size do
-  process :resize_to_fill => [300, 300]
-end
-
-def extension_white_list
-  %w(jpg jpeg gif png)
-end
-
+  version :thumbnail do
+    resize_to_fit(50, 50)
+  end
 
 
 end

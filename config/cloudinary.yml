@@ -1,0 +1,9 @@
+development:
+  cloud_name: "dfoxscqyv"
+  api_key: "199886753561673"
+  api_secret: "_zWRzWgenNUGy-AREzwSEntjjm0"
+
+production:
+  cloud_name: "dfoxscqyv"
+  api_key: "199886753561673"
+  api_secret: "_zWRzWgenNUGy-AREzwSEntjjm0"
