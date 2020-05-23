@@ -32,6 +32,10 @@ gem 'bulma-rails', '~> 0.6.1'
 
 gem 'simple_form'
 
+gem 'rails_admin'
+
+gem 'devise'
+
 
 
 gem 'carrierwave', '~> 0.11.2'
