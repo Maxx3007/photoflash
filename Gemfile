@@ -28,8 +28,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'bulma-rails', '~> 0.6.1'
-
 gem 'simple_form'
 
 gem 'rails_admin'
