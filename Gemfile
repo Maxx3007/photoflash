@@ -34,7 +34,8 @@ gem 'simple_form'
 
 
 
-gem 'carrierwave', '~> 2.1'
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog'
 gem 'cloudinary'
 #for testing
 # Use ActiveStorage variant
