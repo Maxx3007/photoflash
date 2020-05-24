@@ -1,22 +1,22 @@
 
 
-  <h1 class="text-center m-5">My Crypto Whispers</h1>
 
 
-<div class="container">
+
+<div class="container mt-5">
 
     <% @posts.each do |post| %>
 
         <div class="card" style="width: auto;">
           <a href="<%= post_url(post)  %>" > <%= image_tag(post.image.standard.url) %></a>
           <div class="card-body">
-            <h5 class="card-title text-center"><%= link_to post.title, post %></h5>
+            <h5 class="card-title text-center "><%= link_to post.title, post, class: "text-decoration-none text-reset" %></h5>
             <p class="card-text text-center"><%= post.description %></p>
           </div>
         </div>
 
         <br>
-        <hr>
+
     <% end %>
 
 

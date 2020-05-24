@@ -34,10 +34,11 @@ gem 'rails_admin'
 
 gem 'devise'
 
+gem "font-awesome-rails"
 
 
 gem 'carrierwave', '~> 0.11.2'
-gem 'fog'
+
 gem 'cloudinary'
 #for testing
 # Use ActiveStorage variant

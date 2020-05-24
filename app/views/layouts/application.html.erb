@@ -8,24 +8,28 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 
   </head>
 
   <body>
-      <nav class="site-header sticky-top py-1">
+      <nav class="site-header sticky-top py-1 bg-white">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
           <a class="py-2" href="/" aria-label="Product">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-          </a>
+            <i class="fab fa-ethereum fa-3x"></i>
+          </a class="blackiconcolor">
+
+            <h1 style = "font-family:Impact, Charcoal, sans-serif;">Crypto Whispers</h1>
+
             <div>
               <% if current_user %>
-                <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-              <% else %>
-                <%= link_to 'Log in', new_user_session_path %>
+                <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
               <% end %>
             </div>
         </div>
       </nav>
+
+
 
 
     <%= yield %>
