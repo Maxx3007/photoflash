@@ -6,11 +6,11 @@ class PhotoUploader < CarrierWave::Uploader::Base
   process :tags => ['post_picture']
 
   version :standard do
-    process :resize_to_fill => [1100, 300, :north]
+    process :resize_to_fit => [900, 400, :north]
   end
 
-  version :thumbnail do
-    resize_to_fit(50, 50)
+  version :mobile do
+    resize_to_fit(300, 200)
   end
 
 

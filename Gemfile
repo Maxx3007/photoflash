@@ -44,6 +44,8 @@ gem 'cloudinary'
 gem 'meta-tags'
 
 
+gem 'browser'
+
 #for testing
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
