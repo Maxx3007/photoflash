@@ -8,20 +8,19 @@
 
     <% @posts.each do |post| %>
 
-        <div class="card mx-auto" style="width: 900px;">
           <% if browser.device.mobile? %>
-            <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.mobile.url) %></a>
+            <div class="card mx-auto" style="width: 800px;">
+              <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.mobile.url) %></a>
           <% else %>
-            <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.standard.url) %></a>
+            <div class="card mx-auto" style="width: 900px;">
+              <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.standard.url) %></a>
           <% end %>
-          <div class="card-body">
-            <h5 class="card-title text-center "><%= link_to post.title, post, class: "text-decoration-none text-reset" %></h5>
-            <p class="card-text text-center"><%= post.description %></p>
-          </div>
-        </div>
-
+              <div class="card-body">
+                <h5 class="card-title text-center "><%= link_to post.title, post, class: "text-decoration-none text-reset" %></h5>
+                <p class="card-text text-center"><%= post.description %></p>
+              </div>
+            </div>
         <br>
-
     <% end %>
 
 

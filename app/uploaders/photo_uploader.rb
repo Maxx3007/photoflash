@@ -10,7 +10,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :mobile do
-    resize_to_fit(300, 200)
+    resize_to_fit(800, 400)
   end
 
 
