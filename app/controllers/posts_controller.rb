@@ -5,12 +5,19 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    set_meta_tags site: 'cryptowhispers.io'
+
     @posts = Post.all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    set_meta_tags title: @post.title,
+                  site: 'Crypto Whispers',
+                  reverse: true,
+                  description: @post.description
+
   end
 
   # GET /posts/new
