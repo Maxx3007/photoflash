@@ -5,12 +5,9 @@ class PhotoUploader < CarrierWave::Uploader::Base
   process :convert => 'png'
   process :tags => ['post_picture']
 
-  version :standard do
-    process :resize_to_fit => [900, 400, :north]
-  end
 
-  version :mobile do
-    resize_to_fit(800, 400)
+  version :card do
+    resize_to_fill(400, 300)
   end
 
 

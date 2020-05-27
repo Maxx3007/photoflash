@@ -1,29 +1,40 @@
-<title>CryptoWhispers</title>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.0),rgba(255,255,255,255.255)), url(<%= image_path "EthereumPurple.jpg" %>)">
+  <div class="container">
+      <h1> CRYPTO WHISPERS</h1>
+      <p>The easy way to rent or park your car at the airport.</p>
+  </div>
+</div>
 
 
 
 
 <div class="container m-5">
 
+  <h1 class="text-center m-5">Our Articles</h1>
+
+  <div class="row d-flex">
+
 
     <% @posts.each do |post| %>
 
-          <% if browser.device.mobile? %>
-            <div class="card mx-auto" style="width: 800px;">
-              <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.mobile.url) %></a>
-          <% else %>
-            <div class="card mx-auto" style="width: 900px;">
-              <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.standard.url) %></a>
-          <% end %>
+      <div class="card mx-auto m-5 rounded-bottom border-dark" style="width: 402px;">
+          <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.card.url) %></a>
+          <div class="card-trip-infos">
               <div class="card-body">
                 <h5 class="card-title text-center "><%= link_to post.title, post, class: "text-decoration-none text-reset" %></h5>
                 <p class="card-text text-center"><%= post.description %></p>
               </div>
-            </div>
-        <br>
-    <% end %>
+          </div>
+       </div>
+      <br>
+    <% end  %>
+
+  </div>
+</div>
 
 
-<br>
+
+<div class="banner" style="background-image:linear-gradient(rgba(255,255,255,255.1),rgba(0,0,0,0.0)), url(<%= image_path "EthPurple.jpg" %>);">
 
 </div>
