@@ -44,7 +44,7 @@ gem 'cloudinary'
 gem 'meta-tags'
 
 
-gem 'browser'
+gem 'rails_12factor', group: :production
 
 #for testing
 # Use ActiveStorage variant
