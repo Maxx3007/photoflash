@@ -17,3 +17,23 @@
 <p class="text-center">
   <%= link_to 'Back', posts_path, class: "btn btn-primary" %>
 </p>
+
+
+
+
+
+<div class="comments">
+  <div class="container text-right">
+      <h3><strong><%= @post.comments.count %></strong> Comments</h3>
+      <%= render @post.comments %>
+      <div class="comment-form">
+        <hr>
+          <h3 class="card-title text-center">Leave a Comment</h3>
+          <%= render "comments/form" %>
+      </div>
+
+
+
+
+  </div>
+</div>

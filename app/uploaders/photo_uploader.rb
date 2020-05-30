@@ -10,5 +10,9 @@ class PhotoUploader < CarrierWave::Uploader::Base
     resize_to_fill(400, 300)
   end
 
+  version :standard do
+    resize_to_fill(900, 300)
+  end
+
 
 end
