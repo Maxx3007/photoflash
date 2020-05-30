@@ -4,7 +4,10 @@
 
         <p class="float-left"> <%= comment.comment %> </p>
 
-          <%= link_to 'Delete', [comment.post, comment],
+
+        <%# if current_user == comment.user %>
+          <%#= link_to 'Delete', [comment.post, comment],
                     method: :delete, class: "btn btn-danger float-right", data: { confirm: 'Are you sure?' } %>
+        <%# end %>
   </div>
 </div>

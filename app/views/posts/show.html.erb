@@ -25,15 +25,18 @@
 <div class="comments">
   <div class="container text-right">
       <h3><strong><%= @post.comments.count %></strong> Comments</h3>
+      <hr>
       <%= render @post.comments %>
+    <% if signed_in? %>
       <div class="comment-form">
         <hr>
           <h3 class="card-title text-center">Leave a Comment</h3>
           <%= render "comments/form" %>
       </div>
-
-
-
-
+    <% else %>
+      <div class="text-center m-5">
+        <h3>Please Sign in to leave a comment</h3>
+      </div>
+    <% end %>
   </div>
 </div>
