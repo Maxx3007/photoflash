@@ -1,8 +1,8 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.0),rgba(255,255,255,255.255)), url(<%= image_path "EthereumPurple.jpg" %>)">
   <div class="container">
-      <img class="logo" src="assets/Logo.png" width="500" height="100">
-      <h3>Discussing the value of solutions to crypto's biggest problems</h3>
+      <img class="logo_index" src="assets/Logo.png">
+      <p style="font-family:courier; font-size:125% "><strong>Discussing the value of solutions to crypto's biggest problems</strong></p>
   </div>
 </div>
 
@@ -11,7 +11,7 @@
 
 <div class="container m-5">
 
-  <h1 class="text-center m-5">Our Articles</h1>
+  <h1 class="text-center m-5" style="font-family:courier;" >Our Articles</h1>
 
   <div class="row d-flex">
 
@@ -32,9 +32,25 @@
 
   </div>
 </div>
+<br>
+
+<div class="container">
+
+
+
+</div>
 
 
 
 <div class="banner" style="background-image:linear-gradient(rgba(255,255,255,255.1),rgba(0,0,0,0.0)), url(<%= image_path "EthPurple.jpg" %>);">
-
+  <div class="colum text-center" id="contact">
+  <h1 style="font-family:courier; font-size:150% "><strong>Get into contact and start contributing</strong></h1>
+    <div class="m-5">
+      <% if current_user %>
+      <% else %>
+          <%= link_to 'Log In', new_user_session_path, class: "btn btn-primary btn-lg" %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-success btn-lg"  %>
+      <% end %>
+    </div>
+  </div>
 </div>
