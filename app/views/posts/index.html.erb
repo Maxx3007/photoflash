@@ -45,8 +45,27 @@
 <div class="banner" style="background-image:linear-gradient(rgba(255,255,255,255.1),rgba(0,0,0,0.0)), url(<%= image_path "EthPurple.jpg" %>);">
   <div class="colum text-center" id="contact">
   <h1 style="font-family:courier; font-size:150% "><strong>Get into contact and start contributing</strong></h1>
-    <div class="m-5">
+    <div>
       <% if current_user %>
+        <p class="pt-3"style="font-family:courier;">If you have a good idea about potential, please feel free to reach out to Maxx3007 on Reddit, Github, or Slack!</p>
+
+        <div class="icons">
+
+              <a class="mr-3" href="https://github.com/Maxx3007" target="_blank">
+                <i class="fab fa-github fa-4x" style="color:black;"></i>
+                <p style="color:black;">
+                  My Github
+                </p>
+              </a>
+
+              <a class="ml-3" href="https://www.reddit.com/user/maxx3007" target="_blank">
+                <i class="fab fa-reddit fa-4x" style="color:black;"></i>
+                <p style="color:black;">
+                  My Reddit
+                </p>
+              </a>
+        </div>
+
       <% else %>
           <%= link_to 'Log In', new_user_session_path, class: "btn btn-primary btn-lg" %>
           <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-success btn-lg"  %>

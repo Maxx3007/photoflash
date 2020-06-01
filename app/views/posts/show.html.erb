@@ -1,24 +1,27 @@
 
 
-<div class=" text-center">
-  <%= image_tag(@post.image.standard.url) %>
-</div>
+  <div class=" text-center">
+    <%= image_tag(@post.image.standard.url) %>
+  </div>
 
 
-<h3 class="text-center mt-3" style = "font-family:Impact, Charcoal, sans-serif;">
+<div class="content">
+
+<h3 class="text-center mt-5" style = "font-family:Impact, Charcoal, sans-serif;">
   <%= @post.title %>
 </h3>
 
 
-<p class="text-center mt-3" style = "font-family: sans-serif;">
+<p class="text-center mt-5" style = "font-family: sans-serif;">
   <%= @post.description.html_safe %>
 </p>
 
+
+</div>
+
 <p class="text-center">
-  <%= link_to 'Back', posts_path, class: "btn btn-primary" %>
+  <%= link_to 'Back', posts_path, class: "btn btn-primary btn-lg" %>
 </p>
-
-
 
 
 
