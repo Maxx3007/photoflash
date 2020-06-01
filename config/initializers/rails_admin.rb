@@ -42,4 +42,32 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  
+  config.model Post do
+    edit do
+      configure :description, :ck_editor
+    end
+    list do 
+      include_all_fields
+      #exclude_fields :created_at
+      field :description do
+        pretty_value do
+          value.html_safe
+        end
+      end
+    end
+    show do 
+      include_all_fields
+      field :description do
+        pretty_value do
+          value.html_safe
+        end
+      end
+    end
+  end
+  config.included_models = [ Comment, Post, User ]
+
+
+  
+  
 end

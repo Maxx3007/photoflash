@@ -24,7 +24,9 @@ default: &default
 development:
   <<: *default
   database: crypto_whispers_development
-
+  username: crypto_whispers_development
+  password: crypto_whispers_development
+  host: 51.158.160.11
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
