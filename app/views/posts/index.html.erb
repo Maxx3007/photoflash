@@ -16,7 +16,7 @@
   <div class="row d-flex">
 
 
-    <% @posts.each do |post| %>
+    <% @posts.reverse.each do |post| %>
 
       <div class="card mx-auto m-5 rounded-bottom border-dark" style="width: 402px;">
           <a href="<%= post_url(post)  %>"  > <%= image_tag(post.image.card.url) %></a>
