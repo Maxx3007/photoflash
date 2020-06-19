@@ -1,7 +1,7 @@
 
 
   <div class=" text-center">
-    <%= image_tag(@post.image.standard.url) %>
+    <%= cl_image_tag(@post.image.standard.full_public_id, secure: true, :width => 900, :height => 400) %>
   </div>
 
 

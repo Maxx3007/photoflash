@@ -6,6 +6,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   process :tags => ['post_picture']
 
 
+
   version :card do
     resize_to_fill(400, 300)
   end
@@ -13,6 +14,9 @@ class PhotoUploader < CarrierWave::Uploader::Base
   version :standard do
     resize_to_fill(900, 300)
   end
+
+
+
 
 
 end
