@@ -37,7 +37,7 @@ gem 'devise'
 gem "font-awesome-rails"
 
 
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 
 gem 'cloudinary'
 
